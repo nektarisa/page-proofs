@@ -152,8 +152,8 @@
                     </h2>
                     <div class="breadcrumb-catalog">
                         <ul class="breadcrumb">
-                            <li><a href="index.html">Home / </a></li>
-                            <li><a href="#">Men / </a></li>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="#">Men</a></li>
                             <li class="breadcrumb-active">New arrivals</li>
                         </ul>
                     </div>
@@ -162,49 +162,71 @@
 
             <section class="filter">
                 <div class="filet-center-block">
+
                     <div class="filter-nav-small">
-                        <label class="filter-label" for="btn">
+                        <input type="checkbox" id="switch-filter">
+                        <label class="filter-btn" for="switch-filter">
                             <span>Filter</span>
                             <svg width="15" height="10" viewBox="0 0 15 10" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M0.833333 10H4.16667C4.625 10 5 9.625 5 9.16667C5 8.70833 4.625 8.33333 4.16667 8.33333H0.833333C0.375 8.33333 0 8.70833 0 9.16667C0 9.625 0.375 10 0.833333 10ZM0 0.833333C0 1.29167 0.375 1.66667 0.833333 1.66667H14.1667C14.625 1.66667 15 1.29167 15 0.833333C15 0.375 14.625 0 14.1667 0H0.833333C0.375 0 0 0.375 0 0.833333ZM0.833333 5.83333H9.16667C9.625 5.83333 10 5.45833 10 5C10 4.54167 9.625 4.16667 9.16667 4.16667H0.833333C0.375 4.16667 0 4.54167 0 5C0 5.45833 0.375 5.83333 0.833333 5.83333Z" />
                             </svg>
                         </label>
-                        <input class="filter-input" type="checkbox" id="btn">
-                        <ul class="filter-ul">
-                            <li class="filter-list-item">
-                                <a href="#">Category</a>
-                            </li>
-                            <li class="filter-list-txt">
-                                <a href="#">Accessorise</a>
-                            </li>
-                            <li class="filter-list-txt">
-                                <a href="#">Bags</a>
-                            </li>
-                            <li class="filter-list-txt">
-                                <a href="#">Denim</a>
-                            </li>
-                            <li class="filter-list-txt">
-                                <a href="#">Hoodie &amp;&nbsp;Sweatshirts</a>
-                            </li>
-                            <li class="filter-list-txt">
-                                <a href="#">Jackets &amp;&nbsp;Coats</a>
-                            </li>
-                            <li class="filter-list-txt">
-                                <a href="#">Polos</a>
-                            </li>
-                            <li class="filter-list-txt">
-                                <a href="#">Shirts</a>
-                            </li>
-                            <li class="filter-list-item filter-list-item-1">
-                                <a href="#">Brand</a>
-                            </li>
-                            <li class="filter-list-item filter-list-item-1">
-                                <a href="#">Designer</a>
-                            </li>
-                        </ul>
-                    </div>
 
+                        <div class="filter-list-wrp">
+                            <label class="filter-btn" for="switch-filter">
+                                <span>filter</span>
+                                <svg width="15" height="10" viewBox="0 0 15 10" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M0.833333 10H4.16667C4.625 10 5 9.625 5 9.16667C5 8.70833 4.625 8.33333 4.16667 8.33333H0.833333C0.375 8.33333 0 8.70833 0 9.16667C0 9.625 0.375 10 0.833333 10ZM0 0.833333C0 1.29167 0.375 1.66667 0.833333 1.66667H14.1667C14.625 1.66667 15 1.29167 15 0.833333C15 0.375 14.625 0 14.1667 0H0.833333C0.375 0 0 0.375 0 0.833333ZM0.833333 5.83333H9.16667C9.625 5.83333 10 5.45833 10 5C10 4.54167 9.625 4.16667 9.16667 4.16667H0.833333C0.375 4.16667 0 4.54167 0 5C0 5.45833 0.375 5.83333 0.833333 5.83333Z" />
+                                </svg>
+                            </label>
+                            <ul class="filter-ul">
+                                <li class="filter-list-item">
+                                    <a href="#">Category</a>
+                                </li>
+                                <li class="filter-list-txt">
+                                    <a href="#">Accessorise</a>
+                                </li>
+                                <li class="filter-list-txt">
+                                    <a href="#">Bags</a>
+                                </li>
+                                <li class="filter-list-txt">
+                                    <a href="#">Denim</a>
+                                </li>
+                                <li class="filter-list-txt">
+                                    <a href="#">Hoodie &amp;&nbsp;Sweatshirts</a>
+                                </li>
+                                <li class="filter-list-txt">
+                                    <a href="#">Jackets &amp;&nbsp;Coats</a>
+                                </li>
+                                <li class="filter-list-txt">
+                                    <a href="#">Polos</a>
+                                </li>
+                                <li class="filter-list-txt">
+                                    <a href="#">Shirts</a>
+                                </li>
+                                <li class="filter-list-txt">
+                                    <a href="#">Shoes</a>
+                                </li>
+                                <li class="filter-list-txt">
+                                    <a href="#">Sweaters &amp;&nbsp;Knits</a>
+                                </li>
+                                <li class="filter-list-txt">
+                                    <a href="#">T-Shirt</a>
+                                </li>
+                                <li class="filter-list-txt">
+                                    <a href="#">Tanks</a>
+                                </li>
+                                <li class="filter-list-item filter-list-item-1">
+                                    <a href="#">Brand</a>
+                                </li>
+                                <li class="filter-list-item filter-list-item-1">
+                                    <a href="#">Designer</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
 
                     <div class="filter-nav-big">
                         <div class="filtet-checbox-trend">

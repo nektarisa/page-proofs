@@ -39,6 +39,8 @@ body {
 
 .page-header svg {
     fill: #E8E8E8;
+    width: 100%;
+    height: 100%;
 }
 
 .page-header-wrp-btn {
@@ -46,6 +48,9 @@ body {
     justify-content: space-between;
     align-items: flex-end;
     width: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -116,16 +121,6 @@ body {
     align-items: center;
     width: 32px;
     height: 32px;
-    background-color: #222222;
-}
-
-.menu-btn span {
-    display: block;
-    width: 100%;
-    height: 3px;
-    background-color: #fff;
-    margin: auto;
-    position: relative;
 }
 
 .menu-btn:hover span,
@@ -140,6 +135,14 @@ body {
     background-color: #FFFFFF;
 }
 
+.menu-btn span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    position: relative;
+}
+
 .menu-btn span::before,
 .menu-btn span::after {
     content: "";
@@ -150,6 +153,10 @@ body {
     position: absolute;
     top: -10px;
     left: 0;
+}
+
+.menu-btn span::after {
+    top: 10px;
 }
 
 #menu-switch {
@@ -219,17 +226,13 @@ body {
     transform: rotate(135deg);
 }
 
-.menu-btn span::after {
-    top: 10px;
-}
-
 .menu-btn span::before {
     border: 10px;
 }
 
 .menu-list-close-btn:hover::before,
 .menu-list-close-btn:hover::after {
-    background: #6F6E6E;
+    background: #000;
 }
 
 .menu-list-close-btn:active::before,
@@ -845,7 +848,6 @@ body {
 
 .subscribe-form {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     width: 100%;
     max-width: 356px;
@@ -982,6 +984,16 @@ body {
     display: inline-block;
 }
 
+.breadcrumb-catalog a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb-catalog li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}
+
 .breadcrumb-catalog a {
     text-decoration: none;
 }
@@ -1069,9 +1081,10 @@ body {
     min-height: inherit;
 }
 
-
 .filter-nav-small {
     width: 360px;
+    box-sizing: border-box;
+    position: relative;
 }
 
 .filter-nav-big {
@@ -1083,13 +1096,27 @@ body {
     align-items: center;
 }
 
-#btn:checked~ul {
-    visibility: visible;
-    box-shadow: 0 0 10px 5px rgba(75, 77, 78, 0.4);
+#switch-filter {
+    display: none;
+}
+
+#switch-filter:checked~.filter-list-wrp {
+    display: block;
+}
+
+.filter-list-wrp {
+    display: none;
+    width: 100%;
+    width: 360px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.21);
 }
 
 .filter-ul {
-    visibility: hidden;
     width: 360px;
     min-height: 487px;
     -webkit-box-sizing: border-box;
@@ -1098,9 +1125,9 @@ body {
     background-color: #fff;
     list-style: none;
     position: absolute;
-    top: 85px;
     z-index: 20;
-    padding: 17px;
+    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.21);
+    padding: 0 0 0 16px;
 }
 
 .filter-ul a,
@@ -1137,15 +1164,16 @@ body {
 }
 
 .filter-list-item:hover>a {
-    color: #EF5B70;
+    color: #6F6E6E;
 }
 
 .filter-list-item:active>a {
     color: #EF5B70;
 }
 
-.filter-list-item-1>a {
-    color: #6F6E6E;
+
+.filter-list-item>a {
+    color: #EF5B70;
 }
 
 .filter-list-txt>a {
@@ -1155,33 +1183,50 @@ body {
     line-height: 17px;
 }
 
-.filter-label {
+.filter-btn {
+    display: block;
+    width: 100%;
+    margin: 0 0 16px 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    color: #000000;
+    text-align: left;
+}
+
+.filter-btn span {
+    font-style: normal;
     font-weight: 600;
     font-size: 14px;
-    line-height: 17px;
-    color: #6F6E6E;
+    line-height: 16.8px;
     text-transform: uppercase;
+    padding: 0 0 0 16px;
 }
 
-.filter-label:hover {
+.filter-btn svg {
+    margin: 0 0 0 11px;
+    fill: currentColor;
+}
+
+.filter-btn:hover {
     color: #F16D7F;
 }
 
-.filter-label:active {
+.filter-btn:active {
     color: #F16D7F;
 }
 
-.filter-label:hover svg,
-.filter-label-ch:hover svg,
-.filter-label-size:hover svg,
-.filter-label-price:hover svg {
+.filter-btn:hover svg,
+.filter-btn-ch:hover svg,
+.filter-btn-size:hover svg,
+.filter-btn-price:hover svg {
     fill: #F16D7F;
 }
 
-.filter-label:active svg,
-.filter-label-ch:active svg,
-.filter-label-size:active svg,
-.filter-label-price:active svg {
+.filter-btn:active svg,
+.filter-btn-ch:active svg,
+.filter-btn-size:active svg,
+.filter-btn-price:active svg {
     fill: #F16D7F;
 }
 
@@ -1330,14 +1375,6 @@ body {
 
 #btn-price:checked~ul {
     visibility: visible;
-}
-
-.filter-label-price::after {
-    content: '';
-    display: block;
-    position: absolute;
-    border-left: 2px solid #070707;
-    border-top: 2px solid #0a0a0a;
 }
 
 .product-card {
@@ -1499,28 +1536,34 @@ img {
     object-fit: cover;
 }
 
-.cart-ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    list-style-type: none;
-    margin: 96px 0 42px 0;
+.cart-block-big {
+    width: 652px;
+}
 
+.cart-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-around;
+    margin: 96px auto 128px auto;
+}
+
+.cart-img-text {
+    display: flex;
+    margin: 0 0 40px 0;
+    box-shadow: 30px 30px 30px -30px rgba(75, 77, 78, 0.4);
 }
 
 .cart-ul-img {
     width: 262px;
-    margin: 0 0 40px 0;
-    box-shadow: 0 30px 30px -30px rgba(75, 77, 78, 0.4);
     box-sizing: border-box;
 }
+
 
 .cart-ul-price {
     width: 390px;
     height: 309.6px;
-    padding: 22px 22px 0 31px;
-    margin: 0 0 0 -115px;
-    box-shadow: 30px 30px 30px -30px rgba(75, 77, 78, 0.4);
     box-sizing: border-box;
+    padding: 0 0 0 31px;
 }
 
 .cart-ul-h3 {
@@ -1529,60 +1572,30 @@ img {
     color: #222222;
     z-index: 5;
     width: 262px;
-    margin: 0 0 42px 0;
     text-transform: uppercase;
+    align-content: stretch;
+}
+
+.cart-h3-close {
+    display: flex;
+    justify-content: space-between;
 }
 
 .cart-list-close-btn {
-    display: block;
-    position: relative;
-    left: 330px;
-    z-index: -5;
+    margin: 18px 18px auto auto;
 }
 
-.cart-list-close-btn::before {
-    content: "";
-    display: block;
-    width: 18px;
-    height: 2px;
-    background: #6F6E6E;
-    border-radius: 10px;
-    position: absolute;
-    top: 5px;
-    left: -3px;
-    z-index: 5;
-    transform: rotate(45deg);
+.cart-list-close-btn:hover {
+    fill: #F16D7F;
 }
 
-.cart-list-close-btn::after {
-    content: "";
-    display: block;
-    width: 18px;
-    height: 2px;
-    background: #6F6E6E;
-    border-radius: 10px;
-    position: absolute;
-    top: 5px;
-    left: -3px;
-    z-index: 1;
-    transform: rotate(135deg);
+.cart-list-close-btn:active {
+    fill: #000;
 }
-
-.cart-list-close-btn:hover::after,
-.cart-list-close-btn:hover::before {
-    background-color: #F16D7F;
-
-}
-
-.cart-list-close-btn:active::after,
-.cart-list-close-btn:active::before {
-    background-color: #000;
-}
-
 
 .cart-ul-product {
     width: 360px;
-    margin: 0 0 0 25px;
+    margin: 0 0 57px 128px;
 }
 
 .cart-text {
@@ -1592,6 +1605,11 @@ img {
     color: #575757;
     margin: 0 0 6px 0;
 }
+
+.cart-text-p {
+    padding: 42px 0 0 0;
+}
+
 
 .cart-text-price {
     color: #F16D7F;
@@ -1617,13 +1635,9 @@ img {
     width: 100%;
     border: 1px solid #A4A4A4;
     padding: 13px 0 15px 17px;
-    color: #B1B1B1;
+    color: #222222;
     margin: 0 0 21px 0;
     box-sizing: border-box;
-}
-
-.cart-input-1 {
-    color: #222222;
 }
 
 .cart-button {
@@ -1655,6 +1669,7 @@ img {
     text-align: right;
     padding: 39px 34px 0 34px;
     box-sizing: border-box;
+    margin: 36px 0 0 0;
 }
 
 .cart-text-product {
@@ -1729,7 +1744,7 @@ img {
     padding: 17px 41px 16px 39px;
     box-sizing: border-box;
     background: #FFFFFF;
-    margin: 0 0 128px 0;
+    margin: 32px 0 0 0;
 }
 
 .carl-button-two:hover {
@@ -1742,4 +1757,139 @@ img {
     color: #fff;
     border: 1px solid #fff;
     background: #F16D7F;
+}
+
+.registration-form {
+    width: 100%;
+}
+
+.registration-form-bloc {
+    display: flex;
+    align-content: space-around;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1140px;
+    margin: 64px auto 96px auto;
+}
+
+.registration-form-name {
+    width: 360px;
+    margin: 0 128px 0 0;
+}
+
+.registration-h3 {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: #222222;
+    margin: 0 0 20.5px 0;
+}
+
+.registration-input {
+    width: 100%;
+    border: 1px solid #A4A4A4;
+    padding: 12px 0 15px 17px;
+    color: #222222;
+    margin: 0 0 21px 0;
+    box-sizing: border-box;
+}
+
+.registration-gender {
+    display: inline-flex;
+    align-items: center;
+    align-content: space-around;
+    justify-content: left;
+    line-height: 13px;
+    color: #000000;
+    margin: 0 20px 0 0;
+    padding: 0 0 15px 0;
+    font-weight: 300;
+    font-size: 11px;
+}
+
+.registration-radio {
+    width: 17px;
+    height: 17px;
+    margin: 10px 10px 10px 0;
+}
+
+.registration-p {
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 16px;
+    color: #B1B1B1;
+    margin: 0 0 39px 0;
+}
+
+.registration-input-join {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #fff;
+    width: 167px;
+    height: 50px;
+    background: #F16D7F;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    border: none;
+    background
+}
+
+.registration-input-join svg {
+    fill: #ffff;
+}
+
+.registration-input-join:hover svg {
+    fill: #F16D7F;
+}
+
+.registration-input-join:active svg {
+    fill: #fff;
+}
+
+
+.registration-input-join:hover {
+    color: #F16D7F;
+    border: 1px solid #F16D7F;
+    background: #fff;
+}
+
+.registration-input-join:active {
+    color: #fff;
+    border: 1px solid #fff;
+    background: #F16D7F;
+}
+
+.registration-checbox {
+    width: 652px;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+}
+
+.registration-h1 {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    margin: 0 0 22px 0;
+}
+
+.registration-checbox-p {
+    margin: 0 0 22px 0;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000
+}
+
+.registration-li {
+    margin: 0 0 16px 0;
+    list-style-type: none;
+}
+
+.registration-li-checkbox {
+    border: #fff;
+    display: none;
 }
