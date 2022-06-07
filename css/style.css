@@ -1153,7 +1153,7 @@ body {
 }
 
 .filter-list-txt {
-    padding: 11px;
+    padding: 10px;
 }
 
 .filter-list-item>a {
@@ -1647,9 +1647,9 @@ img {
     color: #4A4A4A;
     width: 103px;
     height: 34px;
-    padding: 10px 14px 12px 15px;
     background: #FFFFFF;
     text-transform: uppercase;
+    padding: 0;
 }
 
 .cart-button:hover {
@@ -1839,6 +1839,11 @@ img {
     fill: #ffff;
 }
 
+.registration-input-join::after {
+    background: ;
+
+}
+
 .registration-input-join:hover svg {
     fill: #F16D7F;
 }
@@ -1887,9 +1892,255 @@ img {
 .registration-li {
     margin: 0 0 16px 0;
     list-style-type: none;
+    display: flex;
+    align-items: center;
 }
 
-.registration-li-checkbox {
+.cart-ul-checkbox {
     border: #fff;
-    display: none;
+    margin: 0 0 0 22px;
+}
+
+
+
+
+
+
+@media (max-width: 768px) and (min-width: 376px) {
+    .banner {
+        min-height: 368px;
+        margin: 0 0 20px 0;
+    }
+
+    .banner-wrp {
+        background-position: bottom left;
+    }
+
+    .banner-title {
+        max-width: 283px;
+        margin: 0 15px 8px 0;
+        font-size: 44px;
+        line-height: 52.8px;
+    }
+
+    .banner-subtitle {
+        font-size: 24px;
+        line-height: 28.8px;
+    }
+
+    .categories {
+        margin: 0 0 154px 0;
+    }
+
+    .categories .center-block {
+        column-gap: 20px;
+    }
+
+    .categories-item {
+        min-height: 167px;
+        margin: 0 0 20px 0;
+    }
+
+    .products {
+        margin: 0 0 65px 0;
+    }
+
+    .products-txt {
+        margin: 0 0 72px 0;
+    }
+
+    .features {
+        padding: 48px 20px 64px 20px;
+    }
+
+    .features-list {
+        flex-direction: column;
+    }
+
+    .features-item {
+        margin: 0 auto 48px auto;
+    }
+
+    .features-item:last-child {
+        margin: 0 auto;
+    }
+
+    .subscribe {
+        min-height: auto;
+        padding: 64px 20px 140px 20px;
+        background-position: 26% 68px;
+        background-size: cover;
+    }
+
+    .subscribe .center-block {
+        flex-direction: column;
+        align-content: center;
+        justify-content: flex-start;
+    }
+
+    .subscribe-info {
+        margin: 0 0 80px 0;
+    }
+
+    .subscribe-form-title {
+        margin: 0;
+        line-height: 27.36px;
+    }
+
+    .subscribe-form-subtitle {
+        margin: 0 0 24px 0;
+        font-size: 18px;
+        line-height: 29.16px;
+    }
+
+    .socials-list {
+        max-width: 146.67px;
+    }
+
+    .socials-item:nth-child(2) {
+        background-color: #F16D7F;
+    }
+
+    .socials-item:nth-child(2) svg {
+        fill: #fff;
+    }
+}
+
+
+@media (max-width: 375px) {
+    .page-header {
+        padding: 0 16px;
+        position: relative;
+    }
+
+    .account-btn,
+    .cart-btn-link {
+        visibility: hidden;
+    }
+
+    .menu-btn {
+        position: absolute;
+        top: 20px;
+        right: 16px;
+    }
+
+    .banner {
+        min-height: 363px;
+        margin: 0 0 64px 0;
+    }
+
+    .banner-wrp {
+        background-image: none;
+    }
+
+    .banner-title {
+        margin: 0 auto;
+    }
+
+    .banner-title {
+        max-width: 236px;
+        text-align: center;
+        font-size: 38px;
+        line-height: 45.6px;
+    }
+
+    .banner-subtitle {
+        max-width: 236px;
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .banner-title::before {
+        height: 61px;
+    }
+
+    .categories .center-block {
+        display: flex;
+    }
+
+    .categories-item {
+        max-width: 343px;
+        min-height: 247px;
+        margin: 0 auto 32px auto;
+    }
+
+    .categories-item:last-child {
+        min-height: 111px;
+    }
+
+    .categories {
+        margin: 0 0 64px 0;
+    }
+
+    .products-txt {
+        margin: 0 0 64px 0;
+    }
+
+    .products-list {
+        margin: 0 0 25px 0;
+        padding: 0 8px;
+        box-sizing: border-box;
+    }
+
+    .products-item {
+        max-width: 358px;
+        margin: 0 auto 15.6px auto;
+    }
+
+    .features {
+        padding: 48px 21px 81px 21px;
+    }
+
+    .features-item {
+        max-width: 347px;
+        margin: 0 auto 46.7px auto;
+        padding: 0;
+    }
+
+    .subscribe {
+        padding: 64px 16px 110px 16px;
+        background-position: 27% 0px;
+    }
+
+    .subscribe-info {
+        max-width: 100%;
+        margin: 0 0 80px 0;
+    }
+
+    .subscribe-info-avatar {
+        margin: 0 0 29px 0;
+    }
+
+    .subscribe-info-txt {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .subscribe-form-subtitle {
+        margin: 0 0 22px 0;
+        font-size: 14px;
+        line-height: 19px;
+    }
+
+    .copyright {
+        min-height: auto;
+        padding: 43px 32px 9px 32px;
+    }
+
+    .copyright .center-block {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: flex-start;
+    }
+
+    .copyright-txt {
+        order: 2;
+        max-width: 251px;
+    }
+
+    .socials-list {
+        max-width: 147px;
+        margin: 0 0 40px 0;
+        order: 1;
+    }
 }
