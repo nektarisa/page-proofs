@@ -959,9 +959,8 @@ body {
 }
 
 .banner-catalog {
-    width: 100%;
     min-height: 148px;
-    margin: 0;
+    padding: 0 32px;
     background-color: #F1E4E6;
 }
 
@@ -1640,8 +1639,6 @@ img {
 }
 
 .cart-list-product {
-    width: 100%;
-    max-width: 360px;
     margin: 0 0 57px 128px;
 }
 
@@ -1824,6 +1821,10 @@ img {
     width: 100%;
     max-width: 360px;
     margin: 0 128px 0 0;
+}
+
+.registration-form {
+    padding: 0 32px;
 }
 
 .registration-h3 {
@@ -2082,8 +2083,38 @@ img {
         padding: 0 197px 49px 197px;
     }
 
-}
+    .registration-form-name {
+        margin: 0 22px 0 0;
+    }
 
+    .cart-block {
+        display: block;
+    }
+
+    .cart-list-product {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 10px;
+    }
+
+    .action_page-cart {
+        width: 100%;
+        max-width: 360px;
+        width: 100%;
+        max-width: 360px;
+        text-align: right;
+        padding: 39px 34px 0 34px;
+        box-sizing: border-box;
+        margin: 36px 0 0 0;
+        text-align: left;
+    }
+
+    .cart-block-big {
+        padding: 0 10px;
+    }
+
+
+}
 
 @media (max-width: 425px) {
     .page-header {
@@ -2242,6 +2273,37 @@ img {
 
     .product-description-filter {
         padding: 0 30px 49px 30px;
+    }
+
+    .registration-form-bloc {
+        display: block;
+    }
+
+    .registration-checbox {
+        margin: 40px 0 0 0;
+    }
+
+    .center-block-product {
+        display: block;
+        text-align: center;
+        align-items: center;
+    }
+
+    .cart-block {
+        display: block
+    }
+
+    .cart-list-product {
+        margin: 0 10px;
+    }
+
+    .carl-button-two {
+        margin: 30px 5px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        text-align: center;
+        text-transform: none;
     }
 
 }
