@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scales=1">
     <link rel="stylesheet" href="css/style.css">
     <link rel="index" href="index.html">
     <link rel="product" href="product.html">
@@ -155,15 +155,15 @@
                 <div class="cart-block">
                     <div class="cart-block-big">
                         <div class="cart-img-text">
-                            <div class="cart-ul-img">
+                            <div class="cart-list-img">
                                 <a href="#">
                                     <img class="" src="https://i.postimg.cc/qqTJTqjs/Rectangle-15-copy.jpg"
                                         alt="product-cart" height="306">
                                 </a>
                             </div>
-                            <div class="cart-ul-price">
+                            <div class="cart-list-price">
                                 <div class="cart-h3-close">
-                                    <h1 class="cart-ul-h3"> Mango people t-shirt</h1>
+                                    <h1 class="cart-list-h3"> Mango people t-shirt</h1>
                                     <svg width="18" height="18" viewBox="0 0 18 18" class="cart-list-close-btn"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -173,19 +173,21 @@
                                 <p class="cart-text"> price: <span class="cart-text-price"> $300 </span></p>
                                 <p class="cart-text"> Color: Red</p>
                                 <p class="cart-text"> Size: XL</p>
-                                <p class="cart-text"> Quantity: <span class="cart-text-quantity"> 2 </span></p>
+                                <p class="cart-text"> Quantity:<input type="number" step="1" min="1" max="100"
+                                        id="num_count" name="Quantity:" value="1" title="Qty"
+                                        class="cart-text cart-text-quantity">
                             </div>
                         </div>
                         <div class="cart-img-text">
-                            <div class="cart-ul-img">
+                            <div class="cart-list-img">
                                 <a href="#">
                                     <img class="" src="https://i.postimg.cc/qqTJTqjs/Rectangle-15-copy.jpg"
                                         alt="product-cart" height="306">
                                 </a>
                             </div>
-                            <div class="cart-ul-price">
+                            <div class="cart-list-price">
                                 <div class="cart-h3-close">
-                                    <h1 class="cart-ul-h3"> Mango people t-shirt</h1>
+                                    <h1 class="cart-list-h3"> Mango people t-shirt</h1>
                                     <svg width="18" height="18" viewBox="0 0 18 18" class="cart-list-close-btn"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -195,22 +197,22 @@
                                 <p class="cart-text"> price: <span class="cart-text-price"> $300 </span></p>
                                 <p class="cart-text"> Color: Red</p>
                                 <p class="cart-text"> Size: XL</p>
-                                <p class="cart-text"> Quantity: <span class="cart-text-quantity"> 2 </span></p>
+                                <p class="cart-text"> Quantity:<input type="number" step="1" min="1" max="100"
+                                        id="num_count" name="Quantity:" value="1" title="Qty"
+                                        class="cart-text cart-text-quantity">
                             </div>
                         </div>
                     </div>
-                    <div class="cart-ul-product">
+                    <div class="cart-list-product">
                         <form action="action_page">
-                            <h3 class="cart-ul-product-h3">Shipping adress</h3>
+                            <h3 class="cart-list-product-paragraph">Shipping adress</h3>
                             <input type="text" name="сountry" placeholder="Сountry" class="cart-input">
                             <input type="text" name="state" placeholder="State" class="cart-input">
                             <input type="text" name="postcode" placeholder="Postcode / Zip" class="cart-input">
-                            <button type="button" class="cart-input cart-button">
-                                <span class="">Get a quote</span>
-                            </button>
-                            <div class="cart-ul-product-form">
+                            <button type="button" class="cart-input cart-button">Get a quote</button>
+                            <div class="cart-list-product-form">
                                 <h3 class="cart-text-product">Sub total $900</h3>
-                                <h2 class="cart-text-product-h2">Grand <span class="cart-text-price">$900</span>
+                                <h2 class="cart-text-product-paragraph">Grand <span class="cart-text-price">$900</span>
                                 </h2>
                                 <hr class="cart-hr">
                                 <input type="submit" value="Proceed to checkout" class="cart-product-input">
@@ -218,7 +220,7 @@
                         </form>
                     </div>
                     <div>
-                        <ul class="cart-ul-button">
+                        <ul class="cart-list-button">
                             <li>
                                 <button class="carl-button-two" type="button">
                                     <span>Clear Shoping cart</span>
